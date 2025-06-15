@@ -26,7 +26,7 @@ else:
 
 print("Loading summarization model...")
 
-# Create the summarizer pipeline with explicit device specification
+# Create the summarizer pipeline with an explicit device specification
 summarizer = pipeline("summarization", model="facebook/bart-large-cnn", device=device)
 
 print("Model loaded successfully!")
