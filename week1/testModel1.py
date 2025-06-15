@@ -1,8 +1,12 @@
 import os
+import time
 import warnings
 
 import torch
 from transformers import pipeline
+
+# Start timing
+start_time = time.time()
 
 # Optional: Suppress specific warnings
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
@@ -50,3 +54,8 @@ print("Generating summary...")
 result = summarizer(ARTICLE, max_length=150, min_length=50, do_sample=False)
 print("\nSummary:")
 print(result[0]['summary_text'])
+
+# End timing and calculate execution time
+end_time = time.time()
+execution_time = end_time - start_time
+print(f"\nExecution time: {execution_time:.2f} seconds")
