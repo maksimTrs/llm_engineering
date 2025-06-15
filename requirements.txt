@@ -20,6 +20,7 @@ langchain-openai
 langchain_experimental
 langchain_chroma
 langchain[docarray]
+langchain-huggingface
 datasets
 sentencepiece
 matplotlib
